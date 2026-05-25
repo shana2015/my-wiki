@@ -1,0 +1,107 @@
+/* ================ 自定义样式 - 模仿 immmmm.com ================ */
+
+/* --- 全局配色覆写 --- */
+:root {
+  --md-default-bg-color: #fafafa;
+  --md-default-fg-color: #222;
+  --md-default-fg-color--light: #999;
+  --md-primary-fg-color: #fe5186;
+  --md-primary-bg-color: #fff;
+  --md-accent-fg-color: #fe5186;
+  --md-typeset-a-color: #fe5186;
+}
+
+/* --- 暗色模式 --- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #2f2f2f;
+  --md-default-fg-color: #f5f5f5;
+  --md-default-fg-color--light: #73747b;
+  --md-primary-fg-color: #252627;
+  --md-primary-bg-color: #f5f5f5;
+  --md-accent-fg-color: #fe5186;
+  --md-typeset-a-color: #fe5186;
+}
+
+/* --- 隐藏侧边栏 --- */
+.md-sidebar--primary,
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+/* --- 主内容区居中、加宽 --- */
+.md-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+}
+
+.md-grid {
+  max-width: 1000px;
+}
+
+/* --- 去掉卡片阴影，改为分隔线 --- */
+.md-typeset .admonition,
+.md-typeset details {
+  box-shadow: none;
+  border-left: 2px solid var(--md-accent-fg-color);
+}
+
+/* --- 标题样式 --- */
+.md-typeset h1 {
+  font-size: 2.625rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.md-typeset h2 {
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+.md-typeset h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+/* --- 正文 --- */
+.md-typeset {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- 代码块圆角 --- */
+.md-typeset code,
+.md-typeset pre {
+  border-radius: 4px;
+}
+
+/* --- 引用块 --- */
+.md-typeset blockquote {
+  border-left: 2px solid var(--md-accent-fg-color);
+}
+
+/* --- 图片圆角 --- */
+.md-typeset img {
+  border-radius: 4px;
+}
+
+/* --- 首页文章列表两列布局（blog 模式） --- */
+/* 如果启用了 blog 插件可开启此样式 */
+/* .md-blog .md-blog__posts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+.md-blog .md-post {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 20px 10px;
+  box-shadow: none;
+} */
+
+/* --- 响应式 --- */
+@media screen and (max-width: 683px) {
+  .md-typeset h1 { font-size: 2rem; }
+  .md-typeset h2 { font-size: 1.4rem; }
+  .md-typeset h3 { font-size: 1.15rem; }
+  .md-content { padding: 10px 10px 20px; }
+}
